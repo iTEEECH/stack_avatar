@@ -1,7 +1,5 @@
 # Stack Avatar &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
----
-
 ## Description 
 
 Example of an avatar stacking implementation like Facebook.
