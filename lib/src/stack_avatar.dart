@@ -11,11 +11,7 @@ class StackAvatar extends StatelessWidget {
   /// Default value is length of images.
   final int? imageCount;
 
-  const StackAvatar({
-    super.key,
-    required this.images,
-    this.imageCount,
-  });
+  const StackAvatar({super.key, required this.images, this.imageCount});
 
   int get count => imageCount ?? images.length;
 
@@ -33,14 +29,8 @@ class StackAvatar extends StatelessWidget {
         return Align(
           widthFactor: widthFactor,
           child: hasCounter
-              ? _Counter(
-                  key: ValueKey('Counter'),
-                  count: images.length - count,
-                )
-              : _Avatar(
-                  key: ValueKey(images[index]),
-                  image: images[index],
-                ),
+              ? _Counter(key: ValueKey('Counter'), count: images.length - count)
+              : _Avatar(key: ValueKey(images[index]), image: images[index]),
         );
       },
     );
